@@ -1,3 +1,3 @@
-# Headline
+# [Title] API
 
-> An awesome project.
+> Welcome to the [title] API, a great resource for doing [this], [this], and [that].
