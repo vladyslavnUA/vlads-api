@@ -12,6 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // Mount all routes on /api path.
-app.use('/api', routes);
+// app.use('/api', routes);
 
 module.exports = app;
