@@ -13,14 +13,45 @@ router.get("/", (req, res) => {
     })
 })
 
-router.get("/:book", function(req, res) {
-    Book.find({ book: req.params.book })
+router.get("/:title", function(req, res) {
+    Book.find({ title: req.params.title })
     .then(book => {
         res.json({ 'title': book.title, 'author': book.author, 
                     'year-published': book.pubYear,
-        })
+        });
     })
     .catch(err => {
         console.log(err);
     });
 });
+
+// ADD Book
+router.post("/add/book", (req, res) => {
+    const book = new Book(req.body);
+    book.save(function(err, book) {
+        console.log(req.body.title) // print what is added
+        console.log(err)
+        res.json({'addition: ': 'great success', 'book: ': book})
+    });
+});
+
+// DELETE book
+router.delete("/delete/:title", (req, res) => {
+    Book.findOneAndRemove({title: req.params.title}, (err, Book) => {
+        res.json({'removal:': 'great success', 'book: ': req.params.title})
+    });
+})
+
+// UPDATE book
+router.post("/update/book", (req, res) => {
+    Book.findOne({_id: req.body.id}).exec().then(function(book) {
+        book.title = req.body.title || book.title;
+        console.log(`updated book: ${req.body.title}`)
+        res.json({'update: ': 'great success', 'book updated: ': book})
+        return book.save();
+    }).catch(function(err) {
+        console.log(err)
+    });
+})
+
+module.exports = router;
