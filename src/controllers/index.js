@@ -4,9 +4,11 @@ const authRoutes = require('./auth.js');
 
 const router = express.Router();
 
-router.use('/books', bookRoutes);
+// router.use('', bookRoutes);
 router.use('/auth', authRoutes);
 
-router.get('/', (req, res) => {
-    res.json({})
-})
+// router.get('/', (req, res) => {
+//     res.json({})
+// })
+
+module.exports = router;
