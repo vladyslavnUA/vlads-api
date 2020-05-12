@@ -3,11 +3,11 @@ const bcrypt = require("bcryptjs");
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-    username = { type: String, required: true },
-    password = { type: String, required: true },
-    createdAt = { type: Date },
-    updatedAt = { type: Date },
-    booksFromUser = [{ type: Schema.Types.ObjectId, ref: "Book" }]
+    username: { type: String, required: true },
+    password: { type: String, required: true },
+    createdAt: { type: Date },
+    updatedAt: { type: Date },
+    booksFromUser: [{ type: Schema.Types.ObjectId, ref: "Book" }]
 });
 
 UserSchema.pre("save", function(next) {
