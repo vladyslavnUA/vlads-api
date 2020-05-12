@@ -23,5 +23,5 @@ BookSchema.pre("save", function(next) {
     next();
 });
 
-Book = mongoose.model('Book', BookSchema);
+Book = mongoose.model("Book", BookSchema);
 module.exports = Book;
