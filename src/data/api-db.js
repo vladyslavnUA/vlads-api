@@ -2,10 +2,11 @@
 const mongoose = require("mongoose");
 assert = require("assert");
 
-const url = "mongodb://localhost/api-db";
+// const url = "mongodb://localhost/api-db";
+const mongo_uri = process.env.MONGODB_URI;
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  url,
+  mongo_uri,
   { useNewUrlParser: true, useUnifiedTopology: true },
   function(err, db) {
     assert.equal(null, err);
