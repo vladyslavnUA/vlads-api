@@ -1,9 +1,10 @@
 require('dotenv').config()
-const app = require('../server.js')
-const mongoose = require('mongoose')
-const chai = require('chai')
-const chaiHttp = require('chai-http')
-
+const app = require('../server.js');
+const mongoose = require('mongoose');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const Book = require('../models/books');
+const User = require('../models/user');
 chai.config.includeStack = true
 
 const expect = chai.expect
@@ -18,7 +19,7 @@ after((done) => {
     done()
 })
 
-const book = 'The_Da_Vinci_Code'
+// const book = 'The_Da_Vinci_Code'
 
 describe('API endpoints', () => {
     //create a sample book to use
@@ -34,12 +35,14 @@ describe('API endpoints', () => {
         sampleBook.save()
         .then(() => {
             done()
-        })
+        }).catch(err => {
+            console.log(err);
+        });
     })
 
     //delete sample book
     afterEach((done) => {
-        book.deletemany({title: ['sampleTitle'] })
+        sampleBook.remove({title: ['sampleTitle'] })
         .then(() => {
             done()
         })
@@ -47,14 +50,16 @@ describe('API endpoints', () => {
 
     it('should load all books', (done) => {
         chai.request(app)
-        .get('/bookdb/all')
+        .get('/')
         .end((err, res) => {
             if (err) { done(err) }
             expect(res).to.have.status(200)
             expect(res.body).to.be.an('object')
             expect(res.body.title).to.be.equal('sampleTitle')
             expect(res.body.author).to.be.equal('sampleAuthor')
-        })
+        }).catch(err => {
+            console.log(err);
+        });
     })
     // add update delete
 })
