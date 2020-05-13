@@ -10,9 +10,9 @@ npm start
 ```
 
 # Routes
-Here is a sample route for a book in the fiction genre
+Here is a sample route for a book in the database
 <br>
-```/bookdb/{genre=fiction} ```
+```/the-da-vinci-code ```
 
 And the sample output:
 ```
@@ -27,8 +27,6 @@ And the sample output:
     'page_count: '689',
     },
 }
-
-
 
 
 ```
