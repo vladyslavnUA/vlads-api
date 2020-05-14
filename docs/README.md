@@ -34,6 +34,37 @@ And the sample output:
 
 ```
 
+## Get All Books
+Send a GET request to https://vbookapi.herokuapp.com/
+
+Sample data output will look like:
+```
+[
+    {
+        "title": "The Republic",
+        "author": "Plato",
+        "genre": "politics",
+        "pubYear": "380 BCE",
+        "rating": 5,
+        "pageCount": 240,
+    },
+    {
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "pubYear": "1865",
+        "rating": 5,
+        "pageCount": 1225,
+    },
+    {
+        "title": "The Jungle",
+        "author": "Upton Sinclair",
+        "pubYear": "1905",
+        "rating": 5,
+        "pageCount": 475,
+    }
+]
+```
+
 ## Get Single Book
 Send a GET request to https://vbookapi.herokuapp.com/title/(book-title)
 
@@ -42,6 +73,7 @@ Sample data output will look like:
 [
     "title": "War and Peace",
     "author": "Leo Tolstoy",
+    "genre": "literature",
     "pubYear": "1865",
     "rating": 5,
     "pageCount": 1225,
@@ -59,6 +91,7 @@ Sample data output will look like:
     "book: ": {
         "title": "The Jungle",
         "author": "Upton Sinclair",
+        "genre": "society",
         "pubYear": "1905",
         "rating": 5,
         "pageCount": 475,
@@ -77,6 +110,7 @@ Sample data output will look like:
     "book updated: ": {
         "title": "War and Peace",
         "author": "Leo Tolstoy",
+        "genre": "literature",
         "pubYear": "1865",
         "rating": 5,
         "pageCount": 1225,
