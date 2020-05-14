@@ -1,6 +1,6 @@
 # Untitled Book API
 
-> Welcome to my Untitled Book API, a great resource for querying a specific book genre, and getting a random book stats in that category.
+> Welcome to my Untitled Book API, a great resource for querying books from a defined database.
 
 # Installation
 First, install all necessary node modules
@@ -9,6 +9,7 @@ npm install
 npm start
 ```
 
+> **Keep in mind that all requests must be made by [Postman](https://www.postman.com/)**
 # Routes
 Here is a sample route for a book in the database
 <br>
@@ -82,7 +83,7 @@ Sample data output will look like:
 ```
 
 ## Delete a Book
-Send a DELETE request to https://vbookapi.herokuapp.com/delete/title/(book title)
+Send a DELETE request to https://vbookapi.herokuapp.com/delete/title/(book-title)
 
 Sample data output will look like:
 ```
@@ -112,12 +113,10 @@ Send a POST request to https://vbookapi.herokuapp.com/auth/login
 Output will look like:
 ```
 [
-    {
-        "login:": "great success",
-        "user-signed-in:": {
-            "username": "vladyslav",
-            "password": "ENCRYPTED-PASSWORD"
-    }
+    "login:": "great success",
+    "user-signed-in:": {
+        "username": "vladyslav",
+        "password": "ENCRYPTED-PASSWORD"
     }
 ]
 ```
