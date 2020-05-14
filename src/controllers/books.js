@@ -5,7 +5,7 @@ const Book = require('../models/books.js')
 // GET
 router.get("/", (req, res) => {
     Book.find({}).then(books => {
-        res.json({ 'list of available books: ': books });
+        res.json( books );
     })
     .catch(err => {
         console.log(err.message);
@@ -13,9 +13,10 @@ router.get("/", (req, res) => {
     })
 })
 
-router.get("/:title", function(req, res) {
-    Book.find({ title: req.params.title })
+router.get("/title", function(req, res) {
+    Book.findOne({ title: req.params.title }).lean()
     .then(book => {
+        console.log(book)
         res.json({ 'title': book.title, 'author': book.author, 
                     'year-published': book.pubYear,
         });
