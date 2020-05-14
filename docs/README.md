@@ -1,6 +1,8 @@
 # Untitled Book API
 
 > Welcome to my Untitled Book API, a great resource for querying books from a defined database.
+>
+>> **Keep in mind that all requests must be made by [Postman](https://www.postman.com/)**
 
 # Installation
 First, install all necessary node modules
@@ -9,8 +11,8 @@ npm install
 npm start
 ```
 
-> **Keep in mind that all requests must be made by [Postman](https://www.postman.com/)**
-# Routes
+
+# How to Make Requests
 Here is a sample route for a book in the database
 <br>
 ```/the-da-vinci-code ```
@@ -33,7 +35,7 @@ And the sample output:
 ```
 
 ## Get Single Book
-Send a GET request to https://vbookapi.herokuapp.com/title/(book title)
+Send a GET request to https://vbookapi.herokuapp.com/title/(book-title)
 
 Sample data output will look like:
 ```
