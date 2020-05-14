@@ -16,5 +16,5 @@ if (!module.parent) {
         console.log(`app listening on port ${port}`);
     });
 }
- 
+
 module.exports = app;
