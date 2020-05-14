@@ -31,7 +31,7 @@ And the sample output:
 
 ```
 
-##Get Single Book
+## Get Single Book
 Send a GET request to https://vbookapi.herokuapp.com/title/(book title)
 
 Sample data output will look like:
@@ -46,7 +46,7 @@ Sample data output will look like:
 ]
 ```
 
-##Add a Book
+## Add a Book
 Send a POST request to https://vbookapi.herokuapp.com/add/book
 
 Sample data output will look like:
@@ -63,7 +63,7 @@ Sample data output will look like:
 ]
 ```
 
-##Update a Book
+## Update a Book
 Send a PUT request to https://vbookapi.herokuapp.com/update/book
 
 Sample data output will look like:
@@ -81,7 +81,7 @@ Sample data output will look like:
 ]
 ```
 
-##Delete a Book
+## Delete a Book
 Send a DELETE request to https://vbookapi.herokuapp.com/delete/title/(book title)
 
 Sample data output will look like:
@@ -93,7 +93,7 @@ Sample data output will look like:
 ]
 ```
 
-##Signing Up
+## Signing Up
 Send a POST request to https://vbookapi.herokuapp.com/auth/sign-up
 
 User input will look like:
@@ -106,7 +106,7 @@ User input will look like:
 ]
 ```
 
-##Login
+## Login
 Send a POST request to https://vbookapi.herokuapp.com/auth/login
 
 Output will look like:
