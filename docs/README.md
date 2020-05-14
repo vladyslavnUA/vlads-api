@@ -51,6 +51,7 @@ Sample data output will look like:
     {
         "title": "War and Peace",
         "author": "Leo Tolstoy",
+        "genre": "literature",
         "pubYear": "1865",
         "rating": 5,
         "pageCount": 1225,
@@ -58,6 +59,7 @@ Sample data output will look like:
     {
         "title": "The Jungle",
         "author": "Upton Sinclair",
+        "genre": "society",
         "pubYear": "1905",
         "rating": 5,
         "pageCount": 475,
